@@ -1,0 +1,42 @@
+.art-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.art-scrollx {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5rem;
+  width: max-content;
+  height: 100%;
+  padding: 0 10rem 0 8rem;
+}
+
+.art-intro {
+  position: relative;
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.art .image-wrapper {
+  width: 15rem;
+  height: 19rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.chiefs,
+.shelosh {
+  align-self: end;
+  padding-bottom: 4rem;
+}
+
+.david {
+  align-self: center;
+  padding-top: 2rem;
+}

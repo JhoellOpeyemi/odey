@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "HK Grotesk Light";
+  src: url("/fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+    url("/fonts/hkgrotesk-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HK Grotesk Medium";
+  src: url("/fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+    url("/fonts/hkgrotesk-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HK Grotesk Regular";
+  src: url("/fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+    url("/fonts/hkgrotesk-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HK Grotesk Semibold";
+  src: url("/fonts/hkgrotesk-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/hkgrotesk-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merchant Bold";
+  src: url("/fonts/merchant-boldexpanded-webfont.woff2") format("woff2"),
+    url("/fonts/merchant-boldexpanded-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merchant Regular";
+  src: url("/fonts/merchant-expanded-webfont.woff2") format("woff2"),
+    url("/fonts/merchant-expanded-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merchant Semibold";
+  src: url("/fonts/merchant-semiboldexpanded-webfont.woff2") format("woff2"),
+    url("/fonts/merchant-semiboldexpanded-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #222;
+  font-family: "HK Grotesk Regular";
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "HK Grotesk Regular";
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ae8800;
+  border-radius: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.line-block {
+  display: block;
+  overflow: hidden;
+}
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.page-header {
+  position: fixed;
+  right: 4rem;
+  bottom: 0;
+  font-family: "Merchant Regular";
+  font-weight: 400;
+  font-size: clamp(3rem, 11vw + 0.5rem, 8.5rem);
+  text-transform: uppercase;
+  color: #ddd;
+  z-index: -1;
+}
+
+.section-header {
+  font-family: "Merchant Regular";
+  font-weight: 400;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #bbb;
+  z-index: -1;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  .container,
+  .page-container {
+    height: auto;
+  }
+
+  .page-header {
+    position: fixed;
+    top: 6.5rem;
+    left: 5%;
+    right: unset;
+    bottom: unset;
+  }
+}

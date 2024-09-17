@@ -1,0 +1,59 @@
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.loader-text {
+  font-size: 1.5rem;
+  color: #f6f6f6;
+  font-family: "HK Grotesk Medium";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.loader-images {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  display: flex;
+  gap: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.loader-image {
+  position: relative;
+  width: 7rem;
+  height: 13rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.loader-image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+}
+
+/* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */

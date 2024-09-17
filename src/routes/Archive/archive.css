@@ -1,0 +1,18 @@
+.archive-container {
+  width: max-content;
+  height: 100vh;
+  display: flex;
+}
+
+.section {
+  width: max-content;
+  height: 100vh;
+}
+
+.archive-container .title {
+  text-transform: uppercase;
+  font-family: "HK Grotesk Medium";
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: right;
+}

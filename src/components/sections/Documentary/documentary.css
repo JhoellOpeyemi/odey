@@ -1,0 +1,94 @@
+.documentary-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.documentary-scrollx {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5rem;
+  width: max-content;
+  height: 100%;
+  padding: 0 10rem 0 8rem;
+}
+
+.documentary .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.smile {
+  align-self: end;
+  padding-bottom: 3rem;
+}
+
+.smile .image-wrapper {
+  width: 20rem;
+  height: 24.5rem;
+}
+
+.yellow {
+  align-self: center;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.yellow .image-wrapper {
+  width: 18.5rem;
+  height: 23rem;
+}
+
+.yellow .desc {
+  margin-bottom: 7rem;
+}
+
+.manicure {
+  align-self: end;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.manicure .image-wrapper {
+  width: 19rem;
+  height: 25rem;
+}
+
+.manicure .desc {
+  margin-top: 6rem;
+}
+
+.shoes {
+  align-self: end;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.shoes .image-wrapper {
+  width: 25rem;
+  height: 20rem;
+}
+
+.shoes .desc {
+  margin-bottom: 7rem;
+}
+
+.father-land {
+  align-self: center;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.father-land .image-wrapper {
+  width: 25rem;
+  height: 16rem;
+}

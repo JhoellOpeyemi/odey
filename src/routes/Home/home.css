@@ -1,0 +1,279 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-wrapper {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 8.3%);
+  gap: 0 1rem;
+}
+
+.first-text {
+  grid-column: 4 / 9;
+  grid-row: 3 / 5;
+  margin-top: 1rem;
+  opacity: 0;
+}
+
+.second-text {
+  grid-column: 2 / 6;
+  grid-row: 6 / 8;
+  opacity: 0;
+  margin-top: -1rem;
+}
+
+.small-hero-img {
+  position: relative;
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+  margin: 0 0 0 2.5rem;
+  overflow: hidden;
+}
+
+.small-hero-img img {
+  object-position: top;
+}
+
+.small-hero-img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.big-hero-img {
+  grid-column: 7 / 12;
+  grid-row: 6 / 11;
+  margin: -2.25rem -1.8rem 1rem 1rem;
+  overflow: hidden;
+}
+
+.big-hero-img,
+.small-hero-img {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.big-hero-img img {
+  transform: scale(1.6);
+}
+
+.tags {
+  grid-column: 2 / 7;
+  grid-row: 8 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  font-family: "HK Grotesk Medium";
+  opacity: 0;
+}
+
+.tag-line {
+  display: inline-block;
+  width: 35%;
+  height: 0.1rem;
+  background-color: #222;
+}
+
+.tag-text {
+  flex: 1;
+}
+
+.hero-header {
+  grid-column: 2 / 12;
+  grid-row: 9 / 13;
+  place-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-family: "Merchant Regular";
+  font-weight: 400;
+  font-size: clamp(4rem, 12vw + 0.2rem, 11rem);
+  color: #222;
+  margin-right: -1.8rem;
+  letter-spacing: 3px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-header span {
+  display: inline-block;
+  transform: translateY(70%);
+  opacity: 0;
+}
+
+.hero-wrapper .link {
+  display: none;
+}
+
+@media screen and (max-width: 915px) {
+  .small-hero-img {
+    margin: 0 0 1rem 0;
+  }
+
+  .first-text {
+    grid-column: 4 / 12;
+    margin-top: 0;
+    margin-left: 1.25rem;
+  }
+
+  .second-text {
+    grid-column: 4 / 12;
+    grid-row: 5 / 7;
+    margin-top: -1.5rem;
+    margin-left: 1.25rem;
+  }
+
+  .big-hero-img {
+    grid-column: 2 / 12;
+    grid-row: 7 / 11;
+    margin: 1.5rem 0 -1.5rem 0;
+  }
+
+  .hero-header {
+    place-self: end center;
+    margin-right: -2rem;
+  }
+
+  .tags {
+    grid-column: 4 / 10;
+    grid-row: 6 / 7;
+    margin-left: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    height: max-content;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 0 1rem;
+    padding: 20vh 5% 4.5rem 5%;
+  }
+
+  .big-hero-img {
+    width: 100%;
+    height: 50vh;
+    margin: 0;
+  }
+
+  .hero-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .tags {
+    width: max-content;
+    margin: 0.5rem auto 3.5rem auto;
+  }
+
+  .tag-line {
+    display: none;
+  }
+
+  .tag-text {
+    font-style: italic;
+    color: #666;
+  }
+
+  .first-text {
+    width: 80%;
+    margin: 4rem 0 2rem 0;
+  }
+
+  .second-text {
+    width: 80%;
+    align-self: flex-end;
+    text-align: right;
+    margin: 2rem 0 0 0;
+  }
+
+  .small-hero-img {
+    width: 50%;
+    height: 250px;
+    align-self: flex-end;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero-wrapper {
+    padding: 17vh 5% 4rem 5%;
+  }
+
+  .tags {
+    margin: 0.5rem auto 2.5rem auto;
+  }
+
+  .hero-wrapper .link {
+    display: block;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .hero-wrapper .link a {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Merchant Regular";
+    font-size: 1.08rem;
+    text-decoration: none;
+    color: #222;
+  }
+
+  .hero-wrapper .link a::before {
+    position: absolute;
+    content: "";
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.05rem;
+    background-color: #222;
+    transition: all 0.5s;
+  }
+
+  .hero-wrapper .link a:hover::before {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .tag-text {
+    font-size: 0.9rem;
+  }
+
+  .first-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .second-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .small-hero-img {
+    width: 60%;
+    height: 200px;
+  }
+}

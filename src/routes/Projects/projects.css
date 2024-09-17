@@ -1,0 +1,67 @@
+.projects-wrapper {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1.75rem;
+}
+
+.projects {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 8.3%);
+  gap: 0 1.75rem;
+}
+
+.projects h3 {
+  font-size: 1.25rem;
+  font-family: "Merchant Regular";
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 915px) {
+  .projects {
+    gap: 0 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-wrapper {
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    padding: 20vh 5% 4rem;
+  }
+
+  .projects {
+    display: grid;
+    width: 100%;
+  }
+
+  .projects h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .projects-wrapper {
+    gap: 3.5rem;
+    padding: 35vh 5% 4rem;
+  }
+
+  .projects {
+    display: grid;
+    width: 100%;
+  }
+
+  .projects h3 {
+    font-size: 1.05rem;
+  }
+}
