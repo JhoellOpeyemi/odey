@@ -36,7 +36,7 @@ export const animation = (
     .to(images, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 0.5,
-      stagger: 0.04,
+      stagger: 0.05,
     })
     .to(
       loaderImages.current,
@@ -50,7 +50,7 @@ export const animation = (
     .to(images, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 0.5,
-      stagger: 0.04,
+      stagger: 0.06,
     })
     .to(
       ".mask",

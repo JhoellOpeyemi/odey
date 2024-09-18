@@ -4,13 +4,17 @@
   height: 100%;
 }
 
+.documentary-wrapper h2 {
+  display: none;
+}
+
 .documentary-scrollx {
   display: flex;
   flex-wrap: nowrap;
   gap: 5rem;
   width: max-content;
   height: 100%;
-  padding: 0 10rem 0 8rem;
+  padding: 0 2rem 0 8rem;
 }
 
 .documentary .image-wrapper {
@@ -91,4 +95,153 @@
 .father-land .image-wrapper {
   width: 25rem;
   height: 16rem;
+}
+
+@media screen and (max-width: 768px) {
+  .documentary-wrapper h2 {
+    display: block;
+  }
+
+  .documentary-scrollx {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: max-content;
+    padding: 40vh 0 0 0;
+  }
+
+  .documentary .title .line-block {
+    display: inline;
+  }
+
+  .smile {
+    align-self: start;
+    padding-bottom: 0;
+  }
+
+  .smile .image-wrapper {
+    width: 18rem;
+    height: 22rem;
+  }
+
+  .yellow {
+    align-self: end;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0;
+  }
+
+  .yellow .image-wrapper {
+    width: 15em;
+    height: 20rem;
+  }
+
+  .yellow .desc {
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .manicure {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    padding-bottom: 0;
+    padding-top: 3rem;
+  }
+
+  .manicure .image-n-title {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .manicure .image-wrapper {
+    width: 17rem;
+    height: 23rem;
+  }
+
+  .manicure .desc {
+    margin-top: 0;
+  }
+
+  .shoes {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0;
+    padding-top: 3.5rem;
+  }
+
+  .shoes .image-wrapper {
+    width: 22rem;
+    height: 20rem;
+  }
+
+  .shoes .desc {
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .father-land {
+    align-self: start;
+    padding-top: 2rem;
+  }
+
+  .father-land .image-n-title {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+
+  .father-land .image-wrapper {
+    width: 22rem;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .documentary-scrollx {
+    padding: 32vh 0 0 0;
+  }
+
+  .documentary .desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .documentary-scrollx {
+    gap: 3.5rem;
+  }
+
+  .documentary {
+    width: 85%;
+    align-self: center;
+  }
+
+  .documentary .image-wrapper {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .documentary .desc {
+    text-align: left;
+  }
+
+  .documentary .desc .line-block,
+  .documentary .desc .line-block span {
+    display: inline;
+  }
+
+  .manicure,
+  .shoes,
+  .father-land {
+    padding-top: 0;
+  }
 }

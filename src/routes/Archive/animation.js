@@ -33,3 +33,25 @@ export const reveal = (tl) => {
       "-=0.7"
     );
 };
+
+export const mobileReveal = (tl) => {
+  tl.current = gsap
+    .timeline({ delay: 0.2 })
+    .from("nav", {
+      opacity: 0,
+      duration: 0.3,
+    })
+    .from(
+      ".documentary-section .section-header",
+      { opacity: 0, duration: 0.5 },
+      "-=0.1"
+    )
+    .from(
+      ".archive-prompt",
+      {
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.2"
+    );
+};

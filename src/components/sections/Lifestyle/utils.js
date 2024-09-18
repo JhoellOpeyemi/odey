@@ -1,5 +1,14 @@
 import gsap from "gsap";
 
+export const data = [
+  "/assets/archive/lifestyle/shippy.png",
+  "/assets/archive/lifestyle/chemicals.png",
+  "/assets/archive/lifestyle/donpapi.png",
+  "/assets/archive/lifestyle/57.png",
+  "/assets/archive/lifestyle/shakkana.png",
+  "/assets/archive/lifestyle/benjiflow.png",
+];
+
 // functions
 // the timeline for the mouse animation
 export const hoverTimeline = (imageWrapper, state) => {
@@ -25,14 +34,18 @@ export const hoverTimeline = (imageWrapper, state) => {
 
 // runs when mouse hovers a polaroid
 export const handleHover = (e) => {
-  const imageWrapper = e.target.querySelector(".lifestyle-image-wrapper");
+  if (window.innerWidth > 768) {
+    const imageWrapper = e.target.querySelector(".lifestyle-image-wrapper");
 
-  hoverTimeline(imageWrapper, "hover");
+    hoverTimeline(imageWrapper, "hover");
+  }
 };
 
 // runs when mouse leaves a polaroid
 export const handleLeave = (e) => {
-  const imageWrapper = e.target.querySelector(".lifestyle-image-wrapper");
+  if (window.innerWidth > 768) {
+    const imageWrapper = e.target.querySelector(".lifestyle-image-wrapper");
 
-  hoverTimeline(imageWrapper, "leave");
+    hoverTimeline(imageWrapper, "leave");
+  }
 };

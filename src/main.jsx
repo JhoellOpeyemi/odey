@@ -8,6 +8,7 @@ import Home from "./routes/Home/Home.jsx";
 import Polaroids from "./routes/Polaroids/Polaroids.jsx";
 import Projects from "./routes/Projects/Projects.jsx";
 import Archive from "./routes/Archive/Archive.jsx";
+import Contact from "./routes/Contact/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/archive",
         element: <Archive />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

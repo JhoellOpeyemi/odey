@@ -12,7 +12,7 @@ import "./archive.css";
 
 import { horizontalScroll } from "../../utils";
 import PageLoader from "../../components/PageLoader/PageLoader";
-import { reveal } from "./animation";
+import { reveal, mobileReveal } from "./animation";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -35,9 +35,12 @@ const Archive = () => {
 
   useGSAP(() => {
     if (archiveLoader == false) {
-      horizontalScroll(archiveWrapper);
-
-      reveal(tl);
+      if (window.innerWidth > 768) {
+        horizontalScroll(archiveWrapper);
+        reveal(tl);
+      } else {
+        mobileReveal(tl);
+      }
     }
   }, [{ dependencies: [archiveLoader], scope: container.current }]);
 
@@ -50,10 +53,12 @@ const Archive = () => {
           setFunction={setArchiveLoader}
         />
       ) : (
-        <div className="page-container" ref={container}>
+        <div className="page-container archive-page" ref={container}>
           <Nav />
 
           <h1 className="page-header">Archive</h1>
+
+          <p className="archive-prompt">Scroll down</p>
 
           <div className="archive-container" ref={archiveWrapper}>
             <section className="documentary-section section">

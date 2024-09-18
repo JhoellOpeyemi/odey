@@ -1,26 +1,128 @@
+.lifestyle-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.lifestyle-scrollx {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: max-content;
+  height: 100%;
+  padding-right: 10rem;
+}
+
 .lifestyle-intro {
   position: relative;
-  width: 50vw;
+  width: 80vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.lifestyle-wrapper {
-  width: max-content;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  padding: 0 8rem 0 3.5rem;
+.lifestyle-intro h1 {
+  font-size: 2.5rem;
+  font-family: "HK Grotesk Medium";
+}
+
+.lifestyle-wrapper h2 {
+  display: none;
 }
 
 .lifestyle-image-wrapper {
   width: 6rem;
-  height: 14rem;
+  height: 16rem;
   pointer-events: none;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .lifestyle-scrollx {
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    padding: 40vh 0 0 0;
+  }
+
+  .lifestyle-wrapper h2 {
+    display: block;
+  }
+
+  .lifestyle-intro {
+    display: none;
+  }
+
+  .lifestyle-image-wrapper {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .lifestyle {
+    align-self: end;
+  }
+
+  .lifestyle:nth-child(2) .lifestyle-image-wrapper {
+    width: 14rem;
+    height: 15rem;
+  }
+
+  .lifestyle:nth-child(3) .lifestyle-image-wrapper {
+    width: 20rem;
+    height: 13rem;
+  }
+
+  .lifestyle:nth-child(4) .lifestyle-image-wrapper {
+    width: 20rem;
+    height: 13rem;
+  }
+
+  .lifestyle:nth-child(5) .lifestyle-image-wrapper {
+    width: 17rem;
+    height: 15rem;
+  }
+
+  .lifestyle:nth-child(6) .lifestyle-image-wrapper {
+    width: 17rem;
+    height: 15rem;
+  }
+
+  .lifestyle:nth-child(7) .lifestyle-image-wrapper {
+    width: 13rem;
+    height: 16rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .lifestyle-scrollx {
+    padding: 32vh 0 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .lifestyle-scrollx {
+    gap: 2.5rem;
+  }
+
+  .lifestyle {
+    padding: 0;
+    width: 85%;
+    align-self: center;
+  }
+
+  .lifestyle:nth-child(2) .lifestyle-image-wrapper,
+  .lifestyle:nth-child(3) .lifestyle-image-wrapper,
+  .lifestyle:nth-child(4) .lifestyle-image-wrapper,
+  .lifestyle:nth-child(5) .lifestyle-image-wrapper,
+  .lifestyle:nth-child(6) .lifestyle-image-wrapper,
+  .lifestyle:nth-child(7) .lifestyle-image-wrapper {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
 }

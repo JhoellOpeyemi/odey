@@ -102,7 +102,7 @@ export const mobileReveal = (tl) => {
       duration: 0.3,
     })
     .from(".page-header", { opacity: 0, duration: 0.5 }, "-=0.1")
-    .from(".prompt", { opacity: 0, duration: 0.5 }, "-=0.1");
+    .from(".polaroids-prompt", { opacity: 0, duration: 0.5 }, "-=0.1");
 };
 
 export const polaroidsReveal = (elements) => {

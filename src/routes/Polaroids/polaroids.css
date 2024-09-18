@@ -31,7 +31,7 @@
   transform: translateY(10%);
 }
 
-.prompt {
+.polaroids-prompt {
   display: none;
 }
 
@@ -46,14 +46,14 @@
     padding: 46vh 5% 4rem 5%;
   }
 
-  .prompt {
+  .polaroids-prompt {
     display: block;
     position: fixed;
-    top: 13rem;
+    top: 14rem;
     right: 20%;
-    color: #bbb;
+    color: #999;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .img-wrapper {

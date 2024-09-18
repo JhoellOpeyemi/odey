@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.art-wrapper h2 {
+  display: none;
+}
+
 .art-scrollx {
   display: flex;
   align-items: center;
@@ -11,16 +15,21 @@
   gap: 5rem;
   width: max-content;
   height: 100%;
-  padding: 0 10rem 0 8rem;
+  padding: 0;
 }
 
 .art-intro {
   position: relative;
-  width: 50vw;
+  width: 80vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.art-intro h1 {
+  font-size: 2.5rem;
+  font-family: "HK Grotesk Medium";
 }
 
 .art .image-wrapper {
@@ -39,4 +48,65 @@
 .david {
   align-self: center;
   padding-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .art-wrapper h2 {
+    display: block;
+  }
+
+  .art-intro {
+    display: none;
+  }
+
+  .art-scrollx {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    height: max-content;
+    padding: 40vh 0 0 0;
+  }
+
+  .art {
+    padding: 0 10% 0 0;
+    align-self: end;
+  }
+
+  .art .image-wrapper {
+    width: 14rem;
+    height: 20rem;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .art-scrollx {
+    padding: 32vh 0 0 0;
+  }
+
+  .art {
+    padding: 0 10% 0 0;
+    align-self: end;
+  }
+
+  .art .image-wrapper {
+    width: 13rem;
+    height: 19rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .art {
+    padding: 0;
+    width: 85%;
+    align-self: center;
+  }
+
+  .art .image-wrapper {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
 }

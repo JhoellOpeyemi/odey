@@ -21,7 +21,7 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Polaroids = () => {
-  const [polaroidsLoader, setPolaroidsLoader] = useState(false);
+  const [polaroidsLoader, setPolaroidsLoader] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
 
   const container = useRef();
@@ -64,7 +64,7 @@ const Polaroids = () => {
           <Nav />
           <h1 className="page-header">Polaroids</h1>
 
-          <p className="prompt">Scroll to view polaroids</p>
+          <p className="polaroids-prompt">Scroll to view polaroids</p>
 
           <div className="polaroids-wrapper" ref={polaroidsWrapper}>
             {data.map((data, index) => {
