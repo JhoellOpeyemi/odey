@@ -61,9 +61,11 @@ const Contact = () => {
             </div>
 
             <div className="contact-links">
-              <a href="">Instagram</a>
-              <a href="">Pinterest</a>
-              <a href="">LinkedIn</a>
+              <a href="https://www.instagram.com/sr_odey/" target='_blank'>Instagram</a>
+              <a href="https://www.pinterest.com/sr_odey/" target="_blank">
+                Pinterest
+              </a>
+              <a href="https://www.linkedin.com/in/anthony-odey-78b63b189/" target='_blank'>LinkedIn</a>
             </div>
           </div>
         </div>
