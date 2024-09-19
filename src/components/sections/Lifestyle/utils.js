@@ -1,12 +1,12 @@
 import gsap from "gsap";
 
 export const data = [
-  "/assets/archive/lifestyle/shippy.png",
-  "/assets/archive/lifestyle/chemicals.png",
-  "/assets/archive/lifestyle/donpapi.png",
-  "/assets/archive/lifestyle/57.png",
-  "/assets/archive/lifestyle/shakkana.png",
-  "/assets/archive/lifestyle/benjiflow.png",
+  "/assets/archive/lifestyle/shippy.jpg",
+  "/assets/archive/lifestyle/chemical.webp",
+  "/assets/archive/lifestyle/donpapi.jpg",
+  "/assets/archive/lifestyle/57.webp",
+  "/assets/archive/lifestyle/shakkana.jpg",
+  "/assets/archive/lifestyle/benjiflow.jpg",
 ];
 
 // functions
@@ -14,8 +14,7 @@ export const data = [
 export const hoverTimeline = (imageWrapper, state) => {
   if (state == "hover") {
     gsap.to(imageWrapper, {
-      width: "12.75rem",
-      //   height: "17rem",
+      width: "15rem",
       duration: 0.6,
       ease: "power1",
       delay: 0.1,
@@ -24,8 +23,7 @@ export const hoverTimeline = (imageWrapper, state) => {
 
   if (state == "leave") {
     gsap.to(imageWrapper, {
-      width: "6rem",
-      //   height: "14rem",
+      width: "8rem",
       duration: 0.6,
       ease: "power1",
     });

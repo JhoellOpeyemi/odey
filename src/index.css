@@ -165,6 +165,19 @@ span {
   pointer-events: none;
 }
 
+.trailer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+}
+
 @media screen and (max-width: 768px) {
   body,
   .container,

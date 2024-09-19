@@ -25,7 +25,7 @@ const Archive = () => {
 
   const images = [
     "/assets/archive/smile-and-side-eye.webp",
-    "/assets/archive/lifestyle/57.png",
+    "/assets/archive/lifestyle/57.webp",
     "/assets/archive/art/davids-throne.jpg",
   ];
 

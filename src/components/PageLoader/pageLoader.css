@@ -34,8 +34,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 7.5rem;
-  height: 13rem;
+  width: 8.5rem;
+  height: 14rem;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   overflow: hidden;
 }
@@ -47,4 +47,15 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 560px) {
+  .page-loader-image {
+    width: 7.5rem;
+    height: 13rem;
+  }
+
+  .page-text {
+    font-family: "Merchant Medium";
+  }
 }
